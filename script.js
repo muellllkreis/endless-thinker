@@ -2,9 +2,10 @@
 let init = () => {
     const canvas = document.getElementById('fox-img');
     const ctx = canvas.getContext('2d');
-    canvas.width = $('img.base-image').width();
-    canvas.crossOrigin = "Anonymous";
-    canvas.height = $('img.base-image').height();
+    const img = document.getElementById('fox-base-img');
+    canvas.width = img.width;
+    canvas.crossOrigin = "anonymous";
+    canvas.height = img.height;
     ctx.drawImage($('img.base-image').get(0), 0, 0);
     ctx.font = '24pt "Code 7x5"';
     $(document).on('input','#inp',function(){
