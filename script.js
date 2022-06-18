@@ -8,8 +8,8 @@ let init = () => {
     ctx.drawImage($('img.base-image').get(0), 0, 0);
     ctx.font = '36pt "Code 7x5"';
     $(document).on('input','#inp',function(){
-        var ImageData = ctx.getImageData(0, 0, 0, 0);
-        console.log(ImageData);
+        // var ImageData = ctx.getImageData(0, 0, 0, 0);
+        // console.log(ImageData);
         //redraw image
         ctx.clearRect(0,0,canvas.width,canvas.height);
         ctx.drawImage($('img.base-image').get(0), 0, 0);
