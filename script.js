@@ -6,17 +6,18 @@ let init = () => {
     canvas.crossOrigin = "Anonymous";
     canvas.height = $('img.base-image').height();
     ctx.drawImage($('img.base-image').get(0), 0, 0);
-    ctx.font = '36pt "Code 7x5"';
+    ctx.font = '24pt "Code 7x5"';
     $(document).on('input','#inp',function(){
-        // var ImageData = ctx.getImageData(0, 0, 0, 0);
-        // console.log(ImageData);
+        var backgroundColor = ctx.getImageData(0, 0, 1, 1).data;
+        var textColor = ctx.getImageData(canvas.width/2, canvas.height-1, 1, 1).data;
+        console.log(textColor)
         //redraw image
         ctx.clearRect(0,0,canvas.width,canvas.height);
         ctx.drawImage($('img.base-image').get(0), 0, 0);
         //refill text
-        ctx.fillStyle = 'white';
+        ctx.fillStyle =  "rgba(" + backgroundColor[0] + "," + backgroundColor[1] + "," + backgroundColor[2] + "," + backgroundColor[3] + ")";
         ctx.fillRect(150, 50, 300, 100);
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "rgba(" + textColor[0] + "," + textColor[1] + "," + textColor[2] + "," + textColor[3] + ")";
         ctx.fillText($(this).val(),150,150, 300);
     });
     $('button').click(function(){
