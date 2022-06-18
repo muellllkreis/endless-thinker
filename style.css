@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Code 7x5";
+  src: url("./fonts/code_7x5-webfont.woff2") format("woff2"),
+    url("./fonts/code_7x5-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./fonts/ibmplexsans-regular-webfont.woff2") format("woff2"),
+    url("./fonts/ibmplexsans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./fonts/ibmplexsans-bold-webfont.woff2") format("woff2"),
+    url("./fonts/ibmplexsans-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.content {
+  max-width: 960px;
+  margin: auto;
+}
+
+body {
+  background-color: #f6f2e4;
+}
+
+h1 {
+  font-family: "Code 7x5", sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: "IBM Plex Mono", sans-serif;
+  text-align: center;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: #f6f2e4;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50px;
+}
+
+.button .icon {
+  background: url("./res/share_icon.png") no-repeat;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.button .span {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+
+img.fox-img {
+    height: auto;
+    width: auto;
+}
+
+div.fox-img-container {
+    display: flex;
+    justify-content: center;
+}
+
+button.export {
+    float: right;
+    margin-right: 180px; 
+}
