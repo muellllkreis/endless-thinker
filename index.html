@@ -3,6 +3,8 @@
   <head>
     <title>The Endless Thinker</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="content">
@@ -18,10 +20,17 @@
         <p>
           <b>Click on your fox’s thought to change his current insights.</b>
         </p>
+        <form onkeydown="return event.key != 'Enter';">
+            <input type="text" id="inp"/>
+        </form>
         <div class="fox-img-container">
-            <img class="fox-img" src="./res/1299.png"/>
+          <canvas id="fox-img">
+                <img src="./res/1299.png"/>
+          </canvas>
         </div>
-        <button class="button export">Export Fox<span class="icon"></span></button>
+        <button class="button export" onclick="myFunction()">
+          Export Fox<span class="icon"></span>
+        </button>
       </div>
     </div>
   </body>

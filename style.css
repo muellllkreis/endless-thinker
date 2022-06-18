@@ -41,6 +41,11 @@ p {
   text-align: center;
 }
 
+form {
+    font-family: "Code 7x5", sans-serif;
+    text-align: center;
+}
+
 .button {
   background-color: black;
   border: none;
@@ -65,11 +70,6 @@ p {
   float: left;
   width: 20px;
   height: 20px;
-}
-
-img.fox-img {
-    height: auto;
-    width: auto;
 }
 
 div.fox-img-container {
