@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script src="script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="content">
@@ -22,7 +21,8 @@
           <b>Click on your fox&#39;s thought to change his current insights.</b>
         </p>
         <form onkeydown="return event.key != 'Enter';">
-          <input type="text" id="inp" />
+          <input type="text" id="name" placeholder="Name" />
+          <input type="text" id="thought" placeholder="Thought"/>
         </form>
         <div class="fox-img-container">
           <canvas id="fox-img">
