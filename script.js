@@ -1,5 +1,8 @@
-// pixel height of top space for quote
-let QUOTE_OFFSET = 75;
+
+// constants
+let QUOTE_OFFSET = 75;  // pixel height of top space for quote
+let LINE_HEIGHT = 32;   // height of lines in quote text
+let MAX_LINES = 5;       // max lines allowed in quote text
 
 let init = () => {
     // build canvas based on fox image
@@ -32,14 +35,20 @@ let init = () => {
 
     // input field listeners
     nameInput.addEventListener("keyup", function (evt) {
-        //console.log(evt);
+        // prevent enter from submitting the form
+        if (evt.code == "Enter") {
+            evt.stopPropagation();
+        }
         nameText = nameInput.value;
         thoughtText = thoughtInput.value;
         drawText(canvas, ctx, img, nameText, thoughtText, backgroundColor, nameColor);
     }, false);
 
     thoughtInput.addEventListener("keyup", function (evt) {
-        //console.log(evt);
+        // prevent enter from submitting the form
+        if (evt.code == "Enter") {
+            evt.stopPropagation();
+        }
         nameText = nameInput.value;
         thoughtText = thoughtInput.value;
         drawText(canvas, ctx, img, nameText, thoughtText, backgroundColor, nameColor);
@@ -72,7 +81,13 @@ let drawText = (canvas, context, img, nameText, thoughtText, backgroundColor, na
     // draw thought text
     context.fillStyle = "rgba(0, 0, 0, 255)";
     context.font = '24pt "IBM Plex Mono"';
-    context.fillText(thoughtText, 50, 40, 500);
+    let lines = thoughtText.split('\n');
+
+    for (var i = 0; i < lines.length; i++) {
+        if(i + 1 < MAX_LINES) {
+            context.fillText(lines[i], 50, 40 + (i * LINE_HEIGHT), 500);
+        }
+    }
 }
 
 let myFunction = () => {

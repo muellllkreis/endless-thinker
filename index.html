@@ -3,7 +3,7 @@
   <head>
     <title>The Endless Thinker</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <script src="script.js"></script>
   </head>
   <body>
@@ -11,22 +11,25 @@
       <div>
         <h1>THE ENDLESS THINKER</h1>
         <p>
-          <b>&#147;He who thinks little errs much...&#148;</b><br />Expand your fox&#39;s
-          horizon and let him explore some other thoughts; who knows what you
-          might find?
+          <b>&#147;He who thinks little errs much...&#148;</b><br />Expand your
+          fox&#39;s horizon and let him explore some other thoughts; who knows
+          what you might find?
         </p>
       </div>
       <div>
         <p>
           <b>Click on your fox&#39;s thought to change his current insights.</b>
         </p>
-        <form onkeydown="return event.key != 'Enter';">
-          <input type="text" id="name" placeholder="Name" />
-          <input type="text" id="thought" placeholder="Thought"/>
-        </form>
+        <div class="input-area">
+          <form>
+            <textarea id="thought" placeholder="Thought" rows="5"></textarea>
+            <br />
+            <input type="text" id="name" placeholder="Name" />
+          </form>
+        </div>
         <div class="fox-img-container">
           <canvas id="fox-img">
-            <img id="fox-base-img" class="base-image" src="res/1299.png" />
+            <img id="fox-base-img" src="res/1299.png" />
           </canvas>
         </div>
         <button class="button export" onclick="myFunction()">
