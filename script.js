@@ -1,8 +1,9 @@
+import { Species } from './enums.js'
 
 // constants
 let QUOTE_OFFSET = 75;  // pixel height of top space for quote
 let LINE_HEIGHT = 32;   // height of lines in quote text
-let MAX_LINES = 5;       // max lines allowed in quote text
+let MAX_LINES = 5;      // max lines allowed in quote text
 
 let init = () => {
     // build canvas based on fox image
