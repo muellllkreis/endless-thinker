@@ -2,8 +2,13 @@ import { Species } from './enums.js'
 
 // constants
 const QUOTE_OFFSET = 75;  // pixel height of top space for quote
+const QUOTE_MAXWIDTH = 500;
 const LINE_HEIGHT = 32;   // height of lines in quote text
 const MAX_LINES = 5;      // max lines allowed in quote text
+
+// vars
+var foxSpecies = Species.Mystic;
+var foxVersion = 2;
 
 const init = () => {
     // build canvas based on fox image
@@ -22,7 +27,7 @@ const init = () => {
     // namecolor: get bottom pixel in the middle of the image
     // @TODO: namecolor does not work with every fox type
     var backgroundColor = ctx.getImageData(0, QUOTE_OFFSET, 1, 1).data;
-    var nameColor = ctx.getImageData(canvas.width/2, canvas.height-1, 1, 1).data;
+    var nameColor = ctx.getImageData(canvas.width/2 + foxSpecies.nameColXOffset, canvas.height-1 - foxSpecies.nameColYOffset, 1, 1).data;
 
     // draw top rectangle
     ctx.fillStyle =  "rgba(" + backgroundColor[0] + "," + backgroundColor[1] + "," + backgroundColor[2] + "," + backgroundColor[3] + ")";
@@ -70,13 +75,13 @@ const drawText = (canvas, context, img, nameText, thoughtText, backgroundColor, 
     // leave name if it hasn't been changed
     if(nameText.length > 0) {
         // rectangle that hides the original name
-        context.fillRect(150, 50, 300, 100 + QUOTE_OFFSET);
+        context.fillRect(foxSpecies.xpos, 50 + QUOTE_OFFSET, foxSpecies.maxWidth, foxSpecies.height);
     
         // draw name text
         // @TODO: something is wrong with the positioning here
         context.fillStyle = "rgba(" + nameColor[0] + "," + nameColor[1] + "," + nameColor[2] + "," + nameColor[3] + ")";
         context.font = '24pt "Code 7x5"';
-        context.fillText(nameText, 150, 150 + QUOTE_OFFSET/2, 300);
+        context.fillText(nameText, foxSpecies.xpos, 150 + QUOTE_OFFSET/2, foxSpecies.maxWidth);
     }
 
     // draw thought text
@@ -86,7 +91,7 @@ const drawText = (canvas, context, img, nameText, thoughtText, backgroundColor, 
 
     for (var i = 0; i < lines.length; i++) {
         if(i + 1 < MAX_LINES) {
-            context.fillText(lines[i], 50, 40 + (i * LINE_HEIGHT), 500);
+            context.fillText(lines[i], 50, 40 + (i * LINE_HEIGHT), QUOTE_MAXWIDTH);
         }
     }
 }
