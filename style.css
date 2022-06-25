@@ -46,6 +46,23 @@ form {
     text-align: center;
 }
 
+textarea {
+  overflow: hidden;
+  text-align: center;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+#name {
+  margin-bottom: 10px;
+}
+
+div.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
 .button {
   background-color: black;
   border: none;
