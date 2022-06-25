@@ -84,20 +84,21 @@ const drawText = (canvas, context, img, nameText, thoughtText, backgroundColor, 
         context.fillText(nameText, foxSpecies.xpos, 150 + QUOTE_OFFSET/2, foxSpecies.maxWidth);
     }
 
-    // draw thought text
-    context.fillStyle = "rgba(0, 0, 0, 255)";
-    context.font = '24pt "IBM Plex Mono"';
-    let lines = thoughtText.split('\n');
+  // draw thought text
+  context.fillStyle = "rgba(0, 0, 0, 255)";
+  context.font = '24pt "IBM Plex Mono"';
+  let lines = thoughtText.split("\n");
 
     for (var i = 0; i < lines.length; i++) {
         if(i + 1 < MAX_LINES) {
             context.fillText(lines[i], 50, 40 + (i * LINE_HEIGHT), QUOTE_MAXWIDTH);
         }
     }
-}
+  }
+
 
 const myFunction = () => {
-    console.log("Clicked on Button!");
-}
+  console.log("Clicked on Button!");
+};
 
-window.onload = init
+window.onload = init;

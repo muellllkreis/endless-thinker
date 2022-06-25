@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "algoliasearch": "^4.13.1",
     "firebase": "^9.8.4",
-    "firebase-admin": "^11.0.0"
+    "firebase-admin": "^11.0.0",
+    "instantsearch.js": "^4.42.0"
   },
   "type": "module"
 }

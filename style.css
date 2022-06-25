@@ -42,8 +42,8 @@ p {
 }
 
 form {
-    font-family: "Code 7x5", sans-serif;
-    text-align: center;
+  font-family: "Code 7x5", sans-serif;
+  text-align: center;
 }
 
 textarea {
@@ -90,11 +90,29 @@ div.input-area {
 }
 
 div.fox-img-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 button.export {
-    float: right;
-    margin-right: 180px; 
+  float: right;
+  margin-right: 180px;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 1em;
+}
+.ais-SearchBox {
+  margin: 1em 0;
+}
+.ais-Pagination {
+  margin-top: 1em;
+}
+.left-panel {
+  float: left;
+  width: 250px;
+}
+.right-panel {
+  margin-left: 260px;
 }
