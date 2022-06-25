@@ -1,0 +1,21 @@
+export const Species = {
+    Bengal: Symbol("Bengal"),
+    Island: Symbol("Island"),
+    Mystic: Symbol("Mystic"),
+    Pampas: Symbol("Pampas"),
+    Swift: Symbol("Swift"),
+    Tibetian: Symbol("Tibetian"),
+    Jester: Symbol("Jester"),
+    Bear: Symbol("Bear"),
+    King: Symbol("King"),
+    Pale: Symbol("Pale"),
+    Corsac: Symbol("Corsac"),
+    Darwin: Symbol("Darwin"),
+    Kit: Symbol("Kit"),
+    Crab: Symbol("Crab"),
+    Bat: Symbol("Bat"),
+    Zorro: Symbol("Zorro"),
+    Woodland: Symbol("Woodland"),
+    Crab_eating: Symbol("Crab-eating"),
+    Bat_eared: Symbol("Bat-eared")
+}

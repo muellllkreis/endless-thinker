@@ -1,10 +1,9 @@
-import algoliasearch from 'algoliasearch/lite';
-import instantsearch from 'instantsearch.js';
+import { Species } from './enums.js'
 
 // constants
-const QUOTE_OFFSET = 75; // pixel height of top space for quote
-const LINE_HEIGHT = 32; // height of lines in quote text
-const MAX_LINES = 5; // max lines allowed in quote text
+const QUOTE_OFFSET = 75;  // pixel height of top space for quote
+const LINE_HEIGHT = 32;   // height of lines in quote text
+const MAX_LINES = 5;      // max lines allowed in quote text
 
 const init = () => {
   // Search
