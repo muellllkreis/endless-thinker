@@ -1,10 +1,10 @@
 
 // constants
-let QUOTE_OFFSET = 75;  // pixel height of top space for quote
-let LINE_HEIGHT = 32;   // height of lines in quote text
-let MAX_LINES = 5;       // max lines allowed in quote text
+const QUOTE_OFFSET = 75;  // pixel height of top space for quote
+const LINE_HEIGHT = 32;   // height of lines in quote text
+const MAX_LINES = 5;       // max lines allowed in quote text
 
-let init = () => {
+const init = () => {
     // build canvas based on fox image
     const canvas = document.getElementById('fox-img');
     const ctx = canvas.getContext('2d');
@@ -55,7 +55,7 @@ let init = () => {
     }, false);
 }
 
-let drawText = (canvas, context, img, nameText, thoughtText, backgroundColor, nameColor) => {
+const drawText = (canvas, context, img, nameText, thoughtText, backgroundColor, nameColor) => {
     //redraw image
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(img, 0, QUOTE_OFFSET);
@@ -90,7 +90,7 @@ let drawText = (canvas, context, img, nameText, thoughtText, backgroundColor, na
     }
 }
 
-let myFunction = () => {
+const myFunction = () => {
     console.log("Clicked on Button!");
 }
 
